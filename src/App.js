@@ -1,23 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import ffvIIinfo from "./models/ffvIIinfo.js";
+import Button from "./components/Button.jsx";
+import Card from "./components/Card.jsx";
 
 function App() {
+  const [count, setCount] = useState(0);
+  const [currentCharacter, setCurrentCharacter] = useState(ffvIIinfo[count]);
+
+  const changePic = () => {
+    setCount((prevCount) => {
+      const newCount = (prevCount + 1) % ffvIIinfo.length;
+      setCurrentCharacter(ffvIIinfo[newCount]);
+      return newCount;
+    });
+  };
+
+  const prevPic = () => {
+    setCount((prevCount) => {
+      const newCount = (prevCount - 1 + ffvIIinfo.length) % ffvIIinfo.length;
+      setCurrentCharacter(ffvIIinfo[newCount]);
+      return newCount;
+    });
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className="App-header">FFVII Character Viewer</h1>
+      <Card data={currentCharacter} />
+      <div>
+        <Button onClick={prevPic} label="Previous" />
+        <Button onClick={changePic} label="Next" />
+      </div>
+      <div className="footer">
+        <br />Made with ❤️ by Chais
+      </div>
     </div>
   );
 }
