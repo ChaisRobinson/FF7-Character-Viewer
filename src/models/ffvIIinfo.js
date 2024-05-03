@@ -22,7 +22,7 @@ export const ffvIIinfo = [
     {
       name: "Red XIII",
       alliance: "AVALANCHE",
-      photo: `${process.env.PUBLIC_URL}/red.png`,
+      photo: `${process.env.PUBLIC_URL}/Red.png`,
     },
     {
       name: "Yuffie Kisaragi",
