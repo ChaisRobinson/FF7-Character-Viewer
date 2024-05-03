@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/FF7-Character-Viewer/static/css/main.9c7d370a.css",
-    "main.js": "/FF7-Character-Viewer/static/js/main.060feb34.js",
+    "main.js": "/FF7-Character-Viewer/static/js/main.2b19e2f3.js",
     "index.html": "/FF7-Character-Viewer/index.html",
     "main.9c7d370a.css.map": "/FF7-Character-Viewer/static/css/main.9c7d370a.css.map",
-    "main.060feb34.js.map": "/FF7-Character-Viewer/static/js/main.060feb34.js.map"
+    "main.2b19e2f3.js.map": "/FF7-Character-Viewer/static/js/main.2b19e2f3.js.map"
   },
   "entrypoints": [
     "static/css/main.9c7d370a.css",
-    "static/js/main.060feb34.js"
+    "static/js/main.2b19e2f3.js"
   ]
 }
